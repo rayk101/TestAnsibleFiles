@@ -1,7 +1,5 @@
 
 
-# Gets the python version of a host
-
 
 - name: Get Python version 
   hosts: localhost
