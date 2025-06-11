@@ -1,0 +1,33 @@
+
+
+# Gets the python version of a host
+
+
+- name: Get Python version 
+  hosts: localhost
+  gather_facts: yes 
+  remote_user: a-rkhan
+
+  tasks:
+  - name: Prints the targets installed Python version 
+    ansible.builtin.debug:
+      msg: "Python version is: {{ansible_facts.python.version.major}}.{{ansible_python_version.minor}}.{{ansible_python_version.micro}}"
+
+  
+# Line 14 has an issue 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
