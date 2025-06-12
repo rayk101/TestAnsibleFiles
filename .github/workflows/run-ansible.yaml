@@ -1,0 +1,22 @@
+name: Run Ansible Playbook
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run_ansible:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Run Ansible playbook
+        uses: dawidd6/action-ansible-playbook@v3
+        with:
+          playbook: get_python_version.yaml  # Replace with your actual playbook file name
+          directory: ./TestAnsibleFiles  # Relative path to your playbook directory
+          inventory: |
+            [all]
+        
