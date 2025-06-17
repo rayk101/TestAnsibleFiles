@@ -31,7 +31,7 @@ jobs:
         uses: dawidd6/action-ansible-playbook@v3
         with:
           playbook: get_python_version.yaml  # Replace with your actual playbook file name
-          working-directory: ./TestAnsibleFiles      # Relative path to your playbook directory
+          directory: ./TestAnsibleFiles      # Relative path to your playbook directory
           inventory: |
             [all]
             localhost 
