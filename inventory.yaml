@@ -1,0 +1,9 @@
+
+# Inventory settings for Ansible
+
+[all]
+
+localhost ansible_connection=local
+
+
+
