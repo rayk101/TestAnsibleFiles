@@ -34,5 +34,5 @@ jobs:
           directory: /home/runner/work/TestAnsibleFiles/TestAnsibleFiles      # Relative path to your playbook directory
           inventory: |
             [all]
-            localhost 
+            localhost ansible_connection=localhost 
 
