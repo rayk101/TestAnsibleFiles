@@ -10,7 +10,7 @@
   tasks:
   - name: Retreives operating system type of all targets
     ansible.builtin.debug:  
-      msg: "Operating System is: {{ansible_distribution ansible_distribution_version}}"
+      msg: "Operating System is: {{ansible_distribution ~ ' ' ~ ansible_distribution_version}}"
 
 
 
