@@ -12,7 +12,7 @@
       msg: "Python version is: {{ansible_facts.python.version.major}}.{{ansible_facts.python.version.minor}}.{{ansible_facts.python.version.micro}}"
 
   
-# Line 14 has an issue 
+# Fixed syntax error on line 12
 
 
 
