@@ -32,7 +32,6 @@ jobs:
         with:
           playbook: get_python_version.yaml  # Replace with your actual playbook file name
           directory: /home/runner/work/TestAnsibleFiles/TestAnsibleFiles      # Relative path to your playbook directory
-          inventory: |
-            [all]
-            localhost ansible_connection=localhost 
-
+          inventory: inventory.yaml
+          
+           
