@@ -1,5 +1,5 @@
 # This playbook checks if /boot is > 80% full, if it is "sudo yum remove --oldinstallonly"
-# Then mounts the share in both mount 10.200.48.151:/syseng-share /mnt" and then in /mnt/bin run sudo ./sys-check.sh
+# Then mount the share 10.200.48.151:/syseng-share on /mnt" and then in /mnt/bin run sudo ./sys-check.sh (Script ran run in the mnt directory)
 
 
 - name: Operating System
