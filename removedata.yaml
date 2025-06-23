@@ -5,5 +5,18 @@
 - name: Operating System
   hosts: localhost
   gather_facts: yes
-  remote_user: a-rkhan 
+  become: yes # Privallege Esclation to run commands
+  remote_user: your hostname 
+
+  tasks:
+  - name: Get boot usage
+    shell: df -h /boot | awk '{print $5}'
+    register: boot_freespace 
+    changed_when: false
+
+  - name: Display boot usage
+    debug: 
+      msg: '/boot is ' 
+
+
 
