@@ -6,7 +6,7 @@
   hosts: localhost
   gather_facts: yes
   become: yes # Privallege Esclation to run commands
-  remote_user: your hostname 
+  remote_user: a-rkhan 
 
   tasks:
   - name: Get boot usage
@@ -16,7 +16,13 @@
 
   - name: Display boot usage
     debug: 
-      msg: '/boot is ' 
+      msg: '/boot is {{boot_freespace.stdout}}' 
+
+  - name: Check is usage is over 80%
+    shell: sudo yum remove --oldinstallonly
+    when: boot_freespace.stdout > 80 
+    
+
 
 
 
