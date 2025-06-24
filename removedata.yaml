@@ -6,7 +6,7 @@
   hosts: localhost
   gather_facts: yes
   become: yes # Privallege Esclation to run commands
-  remote_user: a-rkhan 
+  remote_user: () 
 
   tasks:
   - name: Get boot usage
@@ -22,8 +22,20 @@
     shell: sudo yum remove --oldinstallonly
     when: boot_freespace.stdout > 80 
     
+  - name: Checks if mount directory exits
+    file:
+      path: /mnt 
+      state: directory
+      owner: ()
+      group: ()
 
-
+  - name: Mount the NFS Share 
+    ansible.posix.mount: 
+      src: 
+      path:
+      fstype: 
+      opts:
+      state: 
  
 
 
