@@ -6,7 +6,7 @@
   hosts: localhost
   gather_facts: yes
   become: yes # Privallege Esclation to run commands
-  remote_user: # 
+  remote_user: a-rkhan 
 
   tasks:
   - name: Get boot usage
