@@ -3,10 +3,10 @@
 
 
 - name: Operating System
-  hosts: localhost
+  hosts: #localhost
   gather_facts: yes
   become: yes # Privallege Esclation to run commands
-  remote_user: a-rkhan 
+  remote_user: #
 
   tasks:
   - name: Get boot usage
