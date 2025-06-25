@@ -1,7 +1,7 @@
-# This repository contains a collection of Ansible playbooks designed to automate system administration tasks, validate playbook syntax, and retrieve network information.
+# This repository contains a collection of Ansible playbooks designed to automate system administration tasks, validate playbook syntax, and retrieve network information  📄 
 
 
-Github Action Workflow:
+Github Action Workflow: 🛠️ 
 
 GitHub Actions Workflow
 run_ansible.yaml
@@ -13,7 +13,7 @@ Runs On: ubuntu-latest
 
 Key Steps:
 
-Installs Ansible.
+Installs Ansible. 📦
 Checks out the repository code.
 Sets up Python.
 Prints the current directory and file list for debugging.
@@ -26,7 +26,7 @@ inventory: Inventory file used for targeting hosts.
 
 ___________________________________
 
-# To run the following playbooks run the command: ansible-playbook <playbook-name>.yaml
+# To run the following playbooks run the command: ansible-playbook <playbook-name>.yaml  🚀 
 
 ip_address.yaml
 Retrieves and displays all IPv4 addresses from the target hosts using Ansible's built-in facts module.
@@ -80,7 +80,7 @@ Key Feature: Simplifies running playbooks on the local machine without SSH.
 
 ___________________________________
 
-# Visual Diagram
+# Visual Diagram 🌐 
 
 ![Visual Diagram](Pipelinestructure.png)
 
