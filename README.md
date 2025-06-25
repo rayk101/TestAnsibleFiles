@@ -82,7 +82,7 @@ ___________________________________
 
 # Visual Diagram
 
-[visualdiagram]("Documents\Pipelinestructure.png")
+![visualdiagram]("Documents\Pipelinestructure.png")
 
 
 
