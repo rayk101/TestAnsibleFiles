@@ -1,6 +1,5 @@
 # This repository contains a collection of Ansible playbooks designed to automate system administration tasks, validate playbook syntax, and retrieve network information.
 
-# These scripts are useful for system engineers and DevOps professionals managing Linux-based infrastructure. 
 
 Github Action Workflow:
 
@@ -83,7 +82,7 @@ ___________________________________
 
 # Visual Diagram
 
-
+[visualdiagram]("Documents\Pipelinestructure.png")
 
 
 
