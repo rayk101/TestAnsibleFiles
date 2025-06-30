@@ -4,6 +4,15 @@ on:
   push:
     branches:
     - main 
+    - develop 
+    - 'SE/**'
+
+  pull_request:
+    branches: 
+    - main 
+    - develop 
+    - 'SE/**'
+
 
 jobs:
   run_ansible:
