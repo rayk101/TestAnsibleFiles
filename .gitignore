@@ -1,3 +1,3 @@
 *.retry
 .ansible/
-run_ansible.yaml 
+get_os.yaml
