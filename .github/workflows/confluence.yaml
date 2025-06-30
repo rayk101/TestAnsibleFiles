@@ -1,0 +1,21 @@
+# Updates README file in github to Confluence Page 
+
+- name: Update conflunece page from README
+  hosts: localhost 
+  gather_facts: false 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
