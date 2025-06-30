@@ -3,6 +3,15 @@
 - name: Update conflunece page from README
   hosts: localhost 
   gather_facts: false 
+  remote_user: rkhan 
+  vars: 
+    conflunece_url: "https://otcmarkets.atlassian.net/wiki/spaces/SE/pages/734298176/Rayyan+s+OTC+Page"
+
+
+  tasks:
+    
+
+
 
 
 
