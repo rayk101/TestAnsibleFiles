@@ -41,7 +41,7 @@ jobs:
         env:
           API_TOKEN: ${{secrets.CONFLUENCE_API_TOKEN }}
         run: |
-          ansible-playbook .github/workflows/confluence.yaml
+          ansible-playbook .github/workflows/publish_confluence.yaml
 
 # Fix API token line 
 # Second comment is added  
