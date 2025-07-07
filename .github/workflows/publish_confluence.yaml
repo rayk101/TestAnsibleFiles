@@ -39,7 +39,7 @@ jobs:
 
       - name: Run Ansible Playbook
         env:
-          API_TOKEN: ${{ secrets.CONFLUENCE_API_TOKEN }}
+          API_TOKEN: ${{secrets.CONFLUENCE_API_TOKEN }}
         run: |
           ansible-playbook .github/workflows/confluence.yaml
 
