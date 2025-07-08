@@ -1,2 +1,60 @@
 
-# Final
+# Draft in progress 
+
+- name: Publish README to Confluence
+  hosts: localhost
+  gather_facts: false
+  vars:
+    confluence_base_url: ""  # e.g., "https://your-domain.atlassian.net/wiki"
+    confluence_page_id: ""   # e.g., "123456789"
+    confluence_user: ""      # e.g., "your-email@example.com"
+    confluence_api_token: "{{ lookup('env', 'API_TOKEN') }}"
+    readme_path: "./README.md"
+
+  tasks:
+    - name: Read README.md content
+      ansible.builtin.slurp:
+        src: "{{ readme_path }}"
+      register: readme_raw
+
+    - name: Decode README content
+      set_fact:
+        readme_content: "{{ readme_raw['content'] | b64decode }}"
+
+    - name: Get current page version
+      uri:
+        url: "{{ confluence_base_url }}/rest/api/content/{{ confluence_page_id }}?expand=version"
+        method: GET
+        user: "{{ confluence_user }}"
+        password: "{{ confluence_api_token }}"
+        force_basic_auth: yes
+        return_content: yes
+        headers:
+          Content-Type: "application/json"
+      register: page_info
+
+    - name: Update Confluence page with README content
+      uri:
+        url: "{{ confluence_base_url }}/rest/api/content/{{ confluence_page_id }}"
+        method: PUT
+        user: "{{ confluence_user }}"
+        password: "{{ confluence_api_token }}"
+        force_basic_auth: yes
+        headers:
+          Content-Type: "application/json"
+        body_format: json
+        body:
+          id: "{{ confluence_page_id }}"
+          type: "page"
+          title: "{{ page_info.json.title }}"
+          version:
+            number: "{{ page_info.json.version.number | int + 1 }}"
+          body:
+            storage:
+              value: "<pre>{{ readme_content | replace('<', '&lt;') | replace('>', '&gt;') }}</pre>"
+              representation: "storage"
+      register: update_result
+
+    - name: Show result
+      debug:
+        var: update_result.status
