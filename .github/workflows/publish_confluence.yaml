@@ -18,7 +18,8 @@ on:
       - 'testbranch/**'
     paths:
       - README.md
-# # This workflow updates a Confluence page with the content of the README file
+
+# This workflow updates a Confluence page with the content of the README file
 jobs:
   update-confluence:
     runs-on: ubuntu-latest
@@ -39,9 +40,8 @@ jobs:
 
       - name: Run Ansible Playbook
         env:
-          API_TOKEN: ${{secrets.CONFLUENCE_API_TOKEN }}
+          API_TOKEN: ${{ secrets.CONFLUENCE_API_TOKEN }}
         run: |
-          ansible-playbook .github/workflows/publish_confluence.yaml
+          ansible-playbook .github/ansible/publish_confluence_playbook.yml
 
-# Fix API token line 
-# Second comment is added  
+          
