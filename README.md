@@ -107,7 +107,7 @@ Defines a basic Ansible inventory with a single localhost target using local con
 
 Purpose: Local testing and development.
 Key Feature: Simplifies running playbooks on the local machine without SSH.
-# Made a new comment
+# Editing this comment
 ___________________________________
 
 <<<<<<< HEAD
