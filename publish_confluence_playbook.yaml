@@ -5,7 +5,7 @@
   hosts: localhost
   gather_facts: false
   vars:
-    confluence_base_url: "https://otcmarkets.atlassian.net/wiki/spaces/SE/pages/734298176/Rayyan+s+OTC+Page"
+    confluence_base_url: "https://otcmarkets.atlassian.net/wiki/"
     confluence_page_id: "734298176"  
     confluence_user: "rayyan@otcmarkets.com"    
     confluence_api_token: "{{ lookup('env', 'CONFLUENCE_API_TOKEN') }}"
