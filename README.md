@@ -1,4 +1,4 @@
-
+<<<<<<< HEAD
 # This repository contains a collection of Ansible playbooks designed to automate system administration tasks, validate playbook syntax, and retrieve network information.
 
 Github Action Workflow:
@@ -7,7 +7,7 @@ Github Action Workflow:
 
 
 Github Action Workflow: 🛠️ 
-
+>>>>>>> develop
 
 GitHub Actions Workflow
 run_ansible.yaml
@@ -19,7 +19,7 @@ Runs On: ubuntu-latest
 
 Key Steps:
 
-
+<<<<<<< HEAD
 
 Installs Ansible. 📦
 
@@ -35,7 +35,7 @@ inventory: Inventory file used for targeting hosts.
 
 ___________________________________
 
-
+<<<<<<< HEAD
 
 
 # To run the following playbooks run the command: ansible-playbook <playbook-name>.yaml  🚀 
@@ -49,7 +49,7 @@ Key Feature: Outputs all IPv4 addresses of the host.
 
 ___________________________________
 
-
+<<<<<<< HEAD
 
 
 - removedata.yaml
@@ -65,7 +65,7 @@ Key Feature: Automates cleanup and remote script execution.
 
 ___________________________________
 
-
+<<<<<<< HEAD
 
 
 - validator.yaml
@@ -77,7 +77,7 @@ Key Feature: Recursively finds and checks .yaml files in /etc/ansible/playbooks.
 
 ___________________________________
 
-
+<<<<<<< HEAD
 
 - get_os.yaml
 
@@ -88,7 +88,7 @@ Key Feature: Uses Ansible facts to print OS name and version (e.g., Ubuntu 22.04
 
 ___________________________________
 
-
+<<<<<<< HEAD
 
 - get_python_version.yaml
 
@@ -99,7 +99,7 @@ Key Feature: Outputs the full Python version (e.g., 3.9.16) using Ansible facts.
 
 ___________________________________
 
-
+<<<<<<< HEAD
 
 - inventory.yaml
 
@@ -109,12 +109,15 @@ Purpose: Local testing and development.
 Key Feature: Simplifies running playbooks on the local machine without SSH.
 # i am making a comment
 ___________________________________
+<<<<<<<<< Temporary merge branch 1
 
+<<<<<<< HEAD
 
+=========
 # adding another comment
-
+>>>>>>>>> Temporary merge branch 2
 # Visual Diagram 🌐 
 
 ![Visual Diagram](Pipelinestructure.png)
-
+>>>>>>> develop
 
