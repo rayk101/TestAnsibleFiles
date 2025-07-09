@@ -17,7 +17,6 @@ Runs On: ubuntu-latest
 
 Key Steps:
 
-___________________________________
 
 Installs Ansible. 📦
 
@@ -72,7 +71,7 @@ Key Feature: Recursively finds and checks .yaml files in /etc/ansible/playbooks.
 
 ___________________________________
 
- 
+
 
 - get_os.yaml
 
@@ -102,6 +101,7 @@ Purpose: Local testing and development.
 Key Feature: Simplifies running playbooks on the local machine without SSH.
 # i am making a comment
 ___________________________________
+
 
 # Visual Diagram 🌐 
 
