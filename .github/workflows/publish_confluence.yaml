@@ -7,7 +7,8 @@ on:
       - main
       - develop
       - SE/**
-      - testbranch/**
+      - 'testbranch' 
+      - 'testbranch/**'
     paths:
       - README.md
       
