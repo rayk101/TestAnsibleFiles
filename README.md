@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # This repository contains a collection of Ansible playbooks designed to automate system administration tasks, validate playbook syntax, and retrieve network information.
 
 Github Action Workflow:
@@ -18,7 +17,7 @@ Runs On: ubuntu-latest
 
 Key Steps:
 
-<<<<<<< HEAD
+___________________________________
 
 Installs Ansible. 📦
 
@@ -34,7 +33,6 @@ inventory: Inventory file used for targeting hosts.
 
 ___________________________________
 
-<<<<<<< HEAD
 
 
 # To run the following playbooks run the command: ansible-playbook <playbook-name>.yaml  🚀 
@@ -48,7 +46,6 @@ Key Feature: Outputs all IPv4 addresses of the host.
 
 ___________________________________
 
-<<<<<<< HEAD
 
 
 - removedata.yaml
@@ -64,7 +61,6 @@ Key Feature: Automates cleanup and remote script execution.
 
 ___________________________________
 
-<<<<<<< HEAD
 
 
 - validator.yaml
@@ -76,7 +72,7 @@ Key Feature: Recursively finds and checks .yaml files in /etc/ansible/playbooks.
 
 ___________________________________
 
-<<<<<<< HEAD
+ 
 
 - get_os.yaml
 
@@ -87,7 +83,6 @@ Key Feature: Uses Ansible facts to print OS name and version (e.g., Ubuntu 22.04
 
 ___________________________________
 
-<<<<<<< HEAD
 
 - get_python_version.yaml
 
@@ -98,7 +93,6 @@ Key Feature: Outputs the full Python version (e.g., 3.9.16) using Ansible facts.
 
 ___________________________________
 
-<<<<<<< HEAD
 
 - inventory.yaml
 
@@ -108,11 +102,9 @@ Purpose: Local testing and development.
 Key Feature: Simplifies running playbooks on the local machine without SSH.
 # i am making a comment
 ___________________________________
-<<<<<<< HEAD
 # adding another comment
 
 
->>>>>>> 6ce85392527af0487e029bf2573b04e70b93417a
 # Visual Diagram 🌐 
 
 ![Visual Diagram](Pipelinestructure.png)
