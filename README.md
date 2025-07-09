@@ -71,7 +71,10 @@ Key Feature: Recursively finds and checks .yaml files in /etc/ansible/playbooks.
 
 ___________________________________
 
+<<<<<<< HEAD
  
+=======
+>>>>>>> 91dc0c5c913e6d5b7fde73eff1826b876f194a23
 
 - get_os.yaml
 
@@ -107,6 +110,8 @@ ___________________________________
 
 
 # Another comment try 
+# adding another comment
+
 # Visual Diagram 🌐 
 
 ![Visual Diagram](Pipelinestructure.png)
