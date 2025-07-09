@@ -10,14 +10,14 @@ on:
       - 'testbranch/**'
     paths:
       - README.md
-  pull_request:
-    branches:
-      - main
-      - develop
-      - 'SE/**'
-      - 'testbranch/**'
-    paths:
-      - README.md
+      
+  # pull_request:
+   # branches:
+    #  - main
+     # - 'testbranch/**'
+
+   # paths:
+    #  - README.md
 
 # This workflow updates a Confluence page with the content of the README file
 jobs:
