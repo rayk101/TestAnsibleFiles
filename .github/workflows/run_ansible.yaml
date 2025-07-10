@@ -6,12 +6,14 @@ on:
     - main 
     - develop 
     - 'SE/**'
+    - '**'
 
   pull_request:
     branches: 
     - main 
     - develop 
     - 'SE/**'
+    - '**'
 
 
 jobs:

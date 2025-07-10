@@ -3,7 +3,7 @@
 
 
 - name: Operating System
-  hosts: #localhost
+  hosts:
   gather_facts: yes
   become: yes # Privallege Esclation to run commands
   remote_user: #

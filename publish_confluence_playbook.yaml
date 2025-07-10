@@ -1,6 +1,5 @@
 
-# Draft in progress 
-
+# Final Draft 
 - name: Publish README to Confluence
   hosts: localhost
   gather_facts: false
@@ -58,4 +57,3 @@
     - name: Show result
       debug:
         var: update_result.status
-# Added another comment
