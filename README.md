@@ -103,3 +103,36 @@ ___________________________________
 # Visual Diagram 🌐 
 ![Visual Diagram](Pipelinestructure.png)
 
+
+_______________________________
+
+
+
+readme_lines = [
+    "# 📁 Ansible Playbooks Repository\n\n",
+    "This repository contains a collection of Ansible playbooks designed to:\n\n",
+    "- Automate system administration tasks ⚙️\n",
+    "- Validate playbook syntax ✅\n",
+    "- Retrieve network and system information 🌐\n\n",
+    "---\n\n",
+    "## 🛠️ GitHub Actions Workflow\n\n",
+    "### `run_ansible.yaml`\n\n",
+    "This GitHub Actions workflow automates the execution of an Ansible playbook whenever changes are pushed to the `main` branch.\n\n",
+    "- **Purpose:** CI/CD automation for infrastructure validation or configuration using Ansible.\n",
+    "- **Runs On:** `ubuntu-latest`\n\n",
+    "### 🔑 Key Steps\n\n",
+    "- 📦 Installs Ansible\n",
+    "- 📥 Checks out the repository code\n",
+    "- 🐍 Sets up Python\n",
+    "- 🧭 Prints the current directory and file list for debugging\n",
+    "- ▶️ Executes the specified Ansible playbook (`get_python_version.yaml` by default) using [dawidd6/action-ansible-playbook](https://github.com/dawidd6/action-ansible-playbook)\n\n",
+    "### ⚙️ Customizable Inputs\n\n",
+    "- `playbook`: Change to any playbook in your repo\n",
+    "- `directory`: Path to your playbook directory\n",
+    "- `inventory`: Inventory file used for targeting hosts\n\n",
+    "---\n\n",
+    "## 🚀 Running Playbooks\n\n",
+    "To run any of the following playbooks, use the command:\n\n",
+    "
+
+
