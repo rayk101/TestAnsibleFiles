@@ -10,8 +10,10 @@ This repository contains a collection of Ansible playbooks designed to:
 📦 **GitHub Repository**: `ansible-automation`  
 
 🛠️ **GitHub Actions Workflow**  
-**run_ansible.yaml**  
-This GitHub Actions workflow automates the execution of an Ansible playbook whenever changes are pushed to the main branch.  
+- **run_ansible.yaml**  
+This GitHub Actions workflow automates the execution of an Ansible playbook whenever changes are pushed to any branch.  
+- **publish_confluence.yaml**  
+This GitHub Actions workflow is automated when ever changes are made to the README and updates it directly to Confluence.
 - **Purpose**: CI/CD automation for infrastructure validation or configuration using Ansible  
 - **Runs On**: `ubuntu-latest`  
 
@@ -58,6 +60,12 @@ To run any of the following playbooks, use:
 🧾 **inventory.yaml**  
 - **Purpose**: Local testing and development  
 - **Key Feature**: Defines a basic Ansible inventory with a single `localhost` target using local connection  
+
+📝 **publish_confluence_playbook.yaml**
+- **Purpose**: Publishes to Confluence: It executes an Ansible playbook (publish_confluence_playbook.yaml) that likely updates a Confluence page with the contents of the README.md.
+- **Key Features**:  
+  - Sets up the environment: It checks out the code, sets up Python, installs Ansible and required dependencies, including the community.general collection.
+  - Publishes to Confluence: It executes an Ansible playbook (publish_confluence_playbook.yaml) that likely updates a Confluence page with the contents of the README.md.
 
 🌐 **Visual Diagram**  
 ![Visual Diagram](Pipelinestructure.png)
