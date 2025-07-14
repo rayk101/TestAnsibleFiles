@@ -57,3 +57,17 @@
     - name: Show result
       debug:
         var: update_result.status
+
+    - name: Check confluence page title 
+      debug:
+        msg: "Confluence page was updated successfully with the tittle: {{page_info.json.title}}"
+
+    - name: Show new version number 
+      debug:
+        msg: "New version number is: {{ page_info.json.version.number | int + 1}}"
+
+    - name: Confirm README content length 
+      debug: 
+        msg: "The length of the README content is {{ readme_content | length }}"
+
+# Added 3 more new debug statements 

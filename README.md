@@ -2,9 +2,9 @@
 
 📁 **Ansible Playbooks Repository**  
 This repository contains a collection of Ansible playbooks designed to:  
--⚙️ Automate system administration tasks  
 - ✅ Validate playbook syntax  
 - 🌐 Retrieve network and system information  
+- ⚙️ Automate system administration tasks   
 
 🧠 **Language**: Ansible, YAML  
 📦 **GitHub Repository**: `TestAnsibleFiles`  
