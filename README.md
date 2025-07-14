@@ -7,7 +7,7 @@ This repository contains a collection of Ansible playbooks designed to:
 - 🌐 Retrieve network and system information  
 
 🧠 **Language**: Ansible, YAML  
-📦 **GitHub Repository**: `ansible-automation`  
+📦 **GitHub Repository**: `TestAnsibleFiles`  
 
 🛠️ **GitHub Actions Workflow**  
 - **run_ansible.yaml**  
