@@ -59,5 +59,11 @@ To run any of the following playbooks, use:
 - **Purpose**: Local testing and development  
 - **Key Feature**: Defines a basic Ansible inventory with a single `localhost` target using local connection  
 
+📝 **publish_confluence.yaml**
+- **Purpose**: Publishes to Confluence: It executes an Ansible playbook (publish_confluence_playbook.yaml) that likely updates a Confluence page with the contents of the README.md.
+- **Key Features**:  
+  - Sets up the environment: It checks out the code, sets up Python, installs Ansible and required dependencies, including the community.general collection.
+  - Publishes to Confluence: It executes an Ansible playbook (publish_confluence_playbook.yaml) that likely updates a Confluence page with the contents of the README.md.
+
 🌐 **Visual Diagram**  
 ![Visual Diagram](Pipelinestructure.png)
