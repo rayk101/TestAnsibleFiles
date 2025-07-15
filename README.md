@@ -80,3 +80,49 @@ To run any of the following playbooks, use:
 ![Visual Diagram](Pipelinestructure.png)
 
 https://github.com/rayk101/TestAnsibleFiles/blob/testbranch15v/Pipelinestructure.png?raw=true
+
+
+___
+
+
+🧠 **Language**: Ansible, YAML  
+📦 **GitHub Repository**: `TestAnsibleFiles`
+
+---
+
+🛠️ **GitHub Actions Workflow**
+
+- **run_ansible.yaml**  
+  Automates execution of an Ansible playbook whenever changes are pushed to any branch.
+
+- **publish_confluence.yaml**  
+  Automatically updates the README content to Confluence when changes are made.
+
+- **Purpose**: CI/CD automation for infrastructure validation or configuration using Ansible  
+- **Runs On**: `ubuntu-latest`
+
+---
+
+🔑 **Key Steps**
+
+- 📦 Installs Ansible  
+- 📥 Checks out the repository code  
+- 🐍 Sets up Python  
+- 🧭 Prints the current directory and file list for debugging  
+- ▶️ Executes the specified Ansible playbook (`get_python_version.yaml` by default) using `dawidd6/action-ansible-playbook`
+
+---
+
+⚙️ **Customizable Inputs**
+
+- `playbook`: Change to any playbook in your repo  
+- `directory`: Path to your playbook directory  
+- `inventory`: Inventory file used for targeting hosts  
+
+---
+
+🚀 **Running Playbooks**
+
+To run any of the following playbooks, use:  
+```bash
+ansible-playbook <playbook-name>.yaml
