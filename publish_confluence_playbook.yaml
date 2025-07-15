@@ -8,10 +8,10 @@
     confluence_page_id: 744685582
     confluence_user: "rayyan@otcmarkets.com"    
     confluence_api_token: "{{ lookup('env', 'ACTION_TOKEN') }}"
-    readme_path: "./README.md"
+    readme_path: "./README.html"
 
   tasks:
-    - name: Read README.md content
+    - name: Read README.html content
       ansible.builtin.slurp:
         src: "{{ readme_path }}"
       register: readme_raw
@@ -50,7 +50,7 @@
             number: "{{ page_info.json.version.number | int + 1 }}"
           body:
             storage:
-              value: "<pre>{{ readme_content | replace('<', '&lt;') | replace('>', '&gt;') }}</pre>"
+              value: "{{ readme_content}}"
               representation: "storage"
       register: update_result
 
