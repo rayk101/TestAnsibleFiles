@@ -50,8 +50,8 @@ ___
 🚀 **Running Playbooks**
 
 To run any of the following playbooks, use:  
-```bash
-ansible-playbook <playbook-name>.yaml
+
+## ansible-playbook <playbook-name>.yaml
 
 ___
 
