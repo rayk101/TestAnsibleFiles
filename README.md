@@ -69,3 +69,4 @@ To run any of the following playbooks, use:
 
 🌐 **Visual Diagram**  
 ![Visual Diagram](Pipelinestructure.png)
+https://github.com/rayk101/TestAnsibleFiles/blob/testbranch15v/Pipelinestructure.png?raw=true
