@@ -39,6 +39,12 @@ jobs:
           pip install ansible
           ansible-galaxy collection install community.general
 
+      - name: Install pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc 
+
+      - name: Convert README.md to HTML 
+        run: pandoc README.md -f markdown -t html -o README.html
+
       - name: Run Ansible Playbook
         env:
           ACTION_TOKEN: ${{ secrets.ACTION_TOKEN }}
