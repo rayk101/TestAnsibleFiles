@@ -51,7 +51,7 @@ ___
 
 To run any of the following playbooks, use:  
 
-## ansible-playbook <playbook-name>.yaml
+`ansible-playbook <playbook-name>.yaml`
 
 ___
 
