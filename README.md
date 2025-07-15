@@ -1,15 +1,24 @@
-# This repository contains a collection of Ansible playbooks designed to automate system administration tasks, validate playbook syntax, and retrieve network information
+# This repository contains a collection of Ansible playbooks designed to automate system administration tasks, 
+# validate playbook syntax, and retrieve network information
 
-📁 **Ansible Playbooks Repository**  
+📁 #Ansible Playbooks Repository
+
 This repository contains a collection of Ansible playbooks designed to:  
+
 - ✅ Validate playbook syntax  
 - 🌐 Retrieve network and system information  
 - ⚙️ Automate system administration tasks   
 
-🧠 **Language**: Ansible, YAML  
-📦 **GitHub Repository**: `TestAnsibleFiles`  
+___
 
-🛠️ **GitHub Actions Workflow**  
+🧠 ##Language: Ansible, YAML 
+- **Ansible**, **YAML**
+
+📦 ##GitHub Repository: 
+- `TestAnsibleFiles`  
+
+🛠️ ##GitHub Actions Workflow
+
 - **run_ansible.yaml**  
 This GitHub Actions workflow automates the execution of an Ansible playbook whenever changes are pushed to any branch.  
 - **publish_confluence.yaml**  
@@ -69,4 +78,5 @@ To run any of the following playbooks, use:
 
 🌐 **Visual Diagram**  
 ![Visual Diagram](Pipelinestructure.png)
+
 https://github.com/rayk101/TestAnsibleFiles/blob/testbranch15v/Pipelinestructure.png?raw=true
