@@ -1,5 +1,4 @@
-# This repository contains a collection of Ansible playbooks designed to automate system administration tasks, 
-# validate playbook syntax, and retrieve network information
+This repository contains a collection of Ansible playbooks designed to automate system administration tasks, validate playbook syntax, and retrieve network information
 
 📁 Ansible Playbooks Repository
 
