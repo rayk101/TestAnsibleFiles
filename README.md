@@ -106,7 +106,7 @@ ___
 
 🌐 **Visual Diagram**  
 
-https://raw.githubusercontent.com/rayk101/TestAnsibleFiles/testbranch17v/TestAnsibleFiles/Pipelinestruture.png 
+![Visual Diagram](Pipelinestructure.png)
 
 
 ___
