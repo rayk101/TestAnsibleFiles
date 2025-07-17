@@ -109,8 +109,6 @@ ___
 ![Visual Diagram](Pipelinestructure.png)
 
 
-
-
 ___
 
 
