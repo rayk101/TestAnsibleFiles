@@ -106,9 +106,8 @@ ___
 
 🌐 **Visual Diagram**  
 
-![Visual Diagram](Pipelinestructure.png)
+https://raw.githubusercontent.com/rayk101/TestAnsibleFiles/testbranch17v/TestAnsibleFiles/Pipelinestruture.png 
 
-# test comment for push
 
 ___
 
