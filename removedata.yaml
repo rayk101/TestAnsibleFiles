@@ -40,7 +40,7 @@
   - name: Run bash script 
     ansible.builtin.shell: sudo ./sys-check.sh
     args:
-      chdir: /mnt/bin  # this is the storage locaiton
+      chdir: /mnt/bin  
 
  
 
