@@ -1,5 +1,5 @@
 
-# Inventory settings for Ansible
+# Inventory settings for Ansible usage
 
 all:
   hosts:

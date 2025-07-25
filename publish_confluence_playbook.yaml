@@ -1,5 +1,5 @@
 
-# Final Draft 
+
 - name: Publish README to Confluence
   hosts: localhost
   gather_facts: false

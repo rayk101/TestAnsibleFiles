@@ -1,6 +1,6 @@
 
 
-
+# Add more verbose output
 
 - name: Retreives IPv4 information from all targets
   hosts: localhost
