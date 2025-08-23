@@ -1,0 +1,74 @@
+
+
+- name: Publish README to Confluence
+  hosts: localhost
+  gather_facts: false
+  vars:
+    confluence_base_url: "https://otcmarkets.atlassian.net/wiki"
+    confluence_page_id: 744685582
+    confluence_user: "rayyan@otcmarkets.com"    
+    confluence_api_token: "{{ lookup('env', 'ACTION_TOKEN') }}"
+    readme_path: "./README.html"
+
+  tasks:
+    - name: Read README.html content
+      ansible.builtin.slurp:
+        src: "{{ readme_path }}"
+      register: readme_raw
+
+    - name: Decode README content
+      set_fact:
+        readme_content: "{{ readme_raw['content'] | b64decode }}"
+
+    - name: Get current page version
+      uri:
+        url: "{{ confluence_base_url }}/rest/api/content/{{ confluence_page_id }}?expand=version"
+        method: GET
+        user: "{{ confluence_user }}"
+        password: "{{ confluence_api_token }}"
+        force_basic_auth: yes
+        return_content: yes
+        headers:
+          Content-Type: "application/json"
+      register: page_info
+
+    - name: Update Confluence page with README content
+      uri:
+        url: "{{ confluence_base_url }}/rest/api/content/{{ confluence_page_id }}"
+        method: PUT
+        user: "{{ confluence_user }}"
+        password: "{{ confluence_api_token }}"
+        force_basic_auth: yes
+        headers:
+          Content-Type: "application/json"
+        body_format: json
+        body:
+          id: "{{ confluence_page_id }}"
+          type: "page"
+          title: "{{ page_info.json.title }}"
+          version:
+            number: "{{ page_info.json.version.number | int + 1 }}"
+          body:
+            storage:
+              value: "{{ readme_content}}"
+              representation: "storage"
+      register: update_result
+
+    - name: Show result
+      debug:
+        var: update_result.status
+
+    - name: Check confluence page title 
+      debug:
+        msg: "Confluence page was updated successfully with the tittle: {{page_info.json.title}}"
+
+    - name: Show new version number 
+      debug:
+        msg: "New version number is: {{ page_info.json.version.number | int + 1}}"
+
+    - name: Confirm README content length 
+      debug: 
+        msg: "The length of the README content is {{ readme_content | length }}"
+
+# Added 3 more new debug statements 
+# All 3 debug

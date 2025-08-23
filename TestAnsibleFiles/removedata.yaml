@@ -1,0 +1,48 @@
+# This playbook checks if /boot is > 80% full, if it is "sudo yum remove --oldinstallonly"
+# Then mount the share 10.200.48.151:/syseng-share on /mnt" and then in /mnt/bin run sudo ./sys-check.sh (Script ran run in the mnt directory)
+
+
+- name: Operating System
+  hosts:
+  gather_facts: yes
+  become: yes # Privallege Esclation to run commands
+  remote_user: #
+
+  tasks:
+  - name: Get boot usage
+    shell: df -h /boot | awk '{print $5}'
+    register: boot_freespace 
+    changed_when: false
+
+  - name: Display boot usage
+    debug: 
+      msg: '/boot is {{boot_freespace.stdout}}' 
+
+  - name: Check is usage is over 80%
+    shell: sudo yum remove --oldinstallonly
+    when: boot_freespace.stdout > 80 
+    
+  - name: Checks if mount directory exits
+    file:
+      path: /mnt 
+      state: directory
+      owner: #
+      group: #
+
+  - name: Mount the NFS Share 
+    ansible.posix.mount: 
+      src: 10.200.48.151:/syseng-share
+      path: /mnt 
+      fstype: nfs 
+      opts: default 
+      state: mounted
+
+  - name: Run bash script 
+    ansible.builtin.shell: sudo ./sys-check.sh
+    args:
+      chdir: /mnt/bin  
+
+ 
+
+
+

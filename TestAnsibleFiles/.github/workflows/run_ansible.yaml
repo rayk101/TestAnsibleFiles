@@ -1,0 +1,48 @@
+name: Run Ansible Playbook
+
+on:
+  push:
+    branches:
+    - main 
+    - develop 
+    - 'SE/**'
+    - '**'
+
+  pull_request:
+    branches: 
+    - main 
+    - develop 
+    - 'SE/**'
+    - '**'
+
+
+jobs:
+  run_ansible:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Ansible
+        run: sudo apt-get install -y ansible
+
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Setup and Install Python 
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Debug - Show current directory and list files
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "List of files:"
+          ls -la
+
+      - name: Run Ansible playbook
+        uses: dawidd6/action-ansible-playbook@v3
+        with:
+          playbook: get_python_version.yaml  # Replace with your actual playbook file name
+          directory: /home/runner/work/TestAnsibleFiles/TestAnsibleFiles      # Relative path to your playbook directory
+          inventory: inventory.yaml
+          
+           
