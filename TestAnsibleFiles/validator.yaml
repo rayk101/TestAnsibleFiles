@@ -1,0 +1,40 @@
+
+# Still in progress
+# Checks all Ansible Playbooks for any syntax error or mispelling and output them on the terminal
+
+- name: Validates Ansible Playbooks
+  hosts: all, localhost
+  remote_user: a-rkhan 
+  gather_facts: no 
+
+  tasks:
+
+  - name: Check all Playbooks
+    ansible.builtin.find:
+      path: /etc/ansible/playbooks
+      patterns: "*yaml"
+      hidden: true
+      recurse: true  
+      file_type: file
+      register: playbooks 
+
+  - name: Validates the syntax
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
