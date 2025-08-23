@@ -1,0 +1,10 @@
+
+# Inventory settings for Ansible usage
+
+all:
+  hosts:
+    localhost:
+      ansible_connection: local
+
+
+
